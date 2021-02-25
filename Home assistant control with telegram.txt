@@ -1,0 +1,32 @@
+#configuration.yaml - 구성요소
+telegram_bot:
+  - platform: polling
+    api_key: 봇 토큰
+    allowed_chat_ids:
+      - 챗 아이디
+notify:
+  - platform: telegram
+    name: dong
+    chat_id: 챗아이디
+
+#configuration.yam - 자동화
+automation:
+  - alias: toggle_tele
+    trigger:
+      platform: event
+      event_type: telegram_command
+      event_data:
+        command: "/toggle_plugs1"
+    action:
+      - service: script.plug1_toggle
+#scripts.yaml - 스크립트
+'plug1_toggle':
+  alias: 텔레그램플러그1토글
+  sequence:
+  - service: switch.toggle
+    data: 
+      entity_id: switch.dawon1
+  - delay: 00:00:01 #이전값의 상태가 오는걸 방지 
+  - service: notify.dong
+    data:
+      message: "플러그1이 {{ states('switch.dawon1') }} 되었습니다."
