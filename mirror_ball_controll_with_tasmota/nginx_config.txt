@@ -1,0 +1,14 @@
+server {
+    listen 80; #포트부분
+    server_name domain.kr; #domain.kr에는 www를 제외한 도메인을 입력
+    root /var/www/ball;
+    allow 172.30.1.254; #공유기 게이트웨이 주소 입력, 또는 허용할 ip 대역
+    deny all;
+        location / {
+                try_files $uri $uri/ =404;
+        }
+        location ~ \.php$ {
+                include snippets/fastcgi-php.conf;
+                fastcgi_pass unix:/var/run/php/php7.3-fpm.sock;
+        }
+}
