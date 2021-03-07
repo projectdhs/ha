@@ -1,0 +1,7 @@
+	while(1){
+	$link=exec('curl -s "http://miniplay.imbc.com/AACLiveURL.ashx?protocol=M3U8&channel=mfm&agent=android&androidVersion=24"');
+	$str= substr($link, 7,3); 
+	if($link != "http://mfmtunein.imbc.com/tmfm/_definst_/tmfm.stream/playlist.m3u8") break; }
+	$init="http://1.255.48.56/smfm/_definst_/mfm.stream/";
+	$insert1 = explode("/",$link);
+    $res = $init.$insert1[6];
