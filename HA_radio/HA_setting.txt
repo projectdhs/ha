@@ -1,0 +1,27 @@
+#scripts.yaml
+
+'radio_mbc_default':
+  alias: mbc 표준 FM
+  sequence:
+  - service: shell_command.radio_mbc_fm_url
+  - delay: 00:00:01
+  - service: homeassistant.update_entity
+    entity_id: sensor.mbc_fm_url
+  - service: homeassistant.update_entity
+    entity_id: sensor.mbc_fm_urls
+  - service: media_player.play_media
+    data:
+      entity_id: media_player.office_speaker
+      media_content_id: "{{ states('sensor.mbc_fm_url') }}{{states('sensor.mbc_fm_urls')}}"
+      media_content_type: music
+#configuration.yaml 
+shell_command:
+  radio_mbc_fm_url: 'php /home/radio/mbc_fm.php'
+  
+sensor:
+  - platform: command_line
+    name: mbc_fm_url
+    command: "sh /home/radio/mbc_fm_1.sh"
+  - platform: command_line
+    name: mbc_fm_urls
+    command: "sh /home/radio/mbc_fm_2.sh"  
