@@ -14,7 +14,9 @@
       entity_id: media_player.office_speaker
       media_content_id: "{{ states('sensor.mbc_fm_url') }}{{states('sensor.mbc_fm_urls')}}"
       media_content_type: music
+      
 #configuration.yaml 
+
 shell_command:
   radio_mbc_fm_url: 'php /home/radio/mbc_fm.php'
   
