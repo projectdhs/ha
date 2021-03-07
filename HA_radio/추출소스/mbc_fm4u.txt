@@ -1,3 +1,4 @@
+<?php
 	while(1){
 	$link=exec('curl -s "http://miniplay.imbc.com/AACLiveURL.ashx?protocol=M3U8&channel=mfm&agent=android&androidVersion=24"');
 	$str= substr($link, 7,3); 
