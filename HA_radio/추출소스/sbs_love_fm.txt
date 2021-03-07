@@ -1,0 +1,2 @@
+<?php
+	$res=exec('curl -s "http://apis.sbs.co.kr/play-api/1.0/onair/channel/S08?v_type=2&platform=pcweb&protocol=hls&jwt-token=sd" | cut -d\" -f252');
