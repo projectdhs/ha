@@ -1,0 +1,19 @@
+automation: 
+  - alias: plug_on
+    trigger:
+      platform: mqtt
+      topic: "plug/on"
+      payload: ""
+      encoding: "utf-8"
+    action:
+      - service: switch.turn_on
+        entity_id: switch.node_name_relay
+  - alias: plug_off
+    trigger:
+      platform: mqtt
+      topic: "plug/off"
+      payload: ""
+      encoding: "utf-8"
+    action:
+      - service: switch.turn_off
+        entity_id: switch.node_name_relay
