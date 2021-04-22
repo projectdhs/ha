@@ -1,0 +1,20 @@
+/etc/nginx.conf 파일에서 수정해야 하는 것
+
+http {
+#기타코드들.. 밑에 복사할 것
+        geoip_country /usr/share/GeoIP/GeoIP.dat;
+        map $geoip_country_code $allowed_country {
+            default no;
+            KR yes;
+        }
+
+
+/etc/nginx/sites-enabled 밑에 있는 파일에서 수정해야 하는 것
+
+    location / {
+#기타코드들.. 밑에 복사할 것
+        if ($allowed_country = no) {
+            return 444;
+            }
+            
+
