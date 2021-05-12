@@ -11,6 +11,6 @@ def get_channel_url(var):
     return object
 def main_code():
     code='sys.argv[1]'
-    lnik=get_channel_url(code)
-    print(lnik)
+    video=get_channel_url(code)
+    print(video)
 main_code()
