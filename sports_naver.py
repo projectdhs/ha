@@ -10,7 +10,7 @@ def get_channel_url(var):
     object=json_code['secUrl']
     return object
 def main_code():
-    code='ad1'
+    code='sys.argv[1]'
     lnik=get_channel_url(code)
     print(lnik)
 main_code()
