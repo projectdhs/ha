@@ -10,7 +10,7 @@ def get_channel_url(var):
     object=json_code['secUrl']
     return object
 def main_code():
-    code='sys.argv[1]'
+    code=sys.argv[1]
     video=get_channel_url(code)
     print(video)
 main_code()
