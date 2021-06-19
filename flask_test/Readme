@@ -1,0 +1,12 @@
+pip3 install flask
+pip3 install waitress
+
+나머지 모듈은 알아서 설치하시고
+python3 flask_test.py로 실행 가능합니다.
+  
+이후 제 기준 http://172.30.2.38:8080/sav_sbs/sbspowerfm 에 들어가면 sbs power fm 재생 url이 250자 기준으로 잘려서 json화 되어서 /var/www/ha/radio/sbspowerfm.txt 에 저장이됩니다. (바로 출력도 됨)
+HA에서 255자 이상 센서는 못 불러와서 문자수로 자른 것입니다.
+  
+http://172.30.2.6:8080/pr_sbs/sbspowerfm 여기에 들어가면 저장된 파일 불러서 출력해줍니다.
+
+HA세팅을 잘 하시면 라디오 재생을 어렵지 않게 할 수 있습니다.
