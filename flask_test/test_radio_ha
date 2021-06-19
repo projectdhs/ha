@@ -1,0 +1,28 @@
+sensor:
+  - platform: rest
+    resource: http://172.30.2.38:8080/pr_sbs/sbspowerfm
+    name: sbs_power_fm1
+    value_template: "{{ value_json.link1}}"
+  - platform: rest
+    resource: http://172.30.2.38:8080/pr_sbs/sbspowerfm
+    name: sbs_power_fm2
+    value_template: "{{ value_json.link2}}"
+    
+shell_command:
+  sbs_power: 'curl -G "http://172.30.2.38:8080/sav_sbs/sbspowerfm"'
+  
+ #scripts.yaml
+  'sbs_power':
+  alias: 'sbs파워fm 재생'
+  sequence:
+  - service: shell_command.sbs_power
+  - delay: 00:00:01
+  - service: homeassistant.update_entity
+    entity_id: sensor.sbs_power_fm1
+  - service: homeassistant.update_entity
+    entity_id: sensor.sbs_power_fm2
+  - service: media_player.play_media
+    data:
+      entity_id: media_player.office_speaker
+      media_content_id: "{{ states('sensor.sbs_power_fm1') }}{{states('sensor.sbs_power_fm2')}}"
+      media_content_type: music
