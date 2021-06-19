@@ -26,3 +26,10 @@ shell_command:
       entity_id: media_player.office_speaker
       media_content_id: "{{ states('sensor.sbs_power_fm1') }}{{states('sensor.sbs_power_fm2')}}"
       media_content_type: music
+      extra: 
+          metadata: 
+                metadataType: 3 
+                title: "SBS POWER FM" 
+                artist: "라디오" 
+                images: 
+                     - url: "https://tilos.hu/images/kockalogo.png"
