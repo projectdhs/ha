@@ -12,7 +12,7 @@ shell_command:
   sbs_power: 'curl -G "http://172.30.2.38:8080/sav_sbs/sbspowerfm"'
   
  #scripts.yaml
-  'sbs_power':
+'sbs_power':
   alias: 'sbs파워fm 재생'
   sequence:
   - service: shell_command.sbs_power
@@ -26,6 +26,7 @@ shell_command:
       entity_id: media_player.office_speaker
       media_content_id: "{{ states('sensor.sbs_power_fm1') }}{{states('sensor.sbs_power_fm2')}}"
       media_content_type: music
+
       extra: 
           metadata: 
                 metadataType: 3 
