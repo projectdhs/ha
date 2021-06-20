@@ -1,0 +1,12 @@
+service: media_extractor.play_media
+data:
+  entity_id: media_player.office_speaker
+  media_content_id: 'https://music.youtube.com/watch?v=eub40qSYYzI'
+  media_content_type: video
+  extra: 
+      metadata: 
+            metadataType: 3 
+            title: "심술" 
+            artist: "볼빨간사춘기" 
+            images: 
+                 - url: "https://tilos.hu/images/kockalogo.png"
