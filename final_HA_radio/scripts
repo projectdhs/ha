@@ -1,0 +1,64 @@
+'radio_mbcfm':
+  alias: mbc 표준 FM
+  sequence:
+  - service: shell_command.mbcfm
+'radio_mbcfm4u':
+  alias: mbc FM4U
+  sequence:
+  - service: shell_command.mbcfm4u
+'radio_sbspowerfm':
+  alias: SBS 파워 FM
+  sequence:
+  - service: shell_command.sbspowerfm
+'radio_sbslovefm':
+  alias: SBS 러브 FM
+  sequence:
+  - service: shell_command.sbslovefm
+'radio_kbscoolfm':
+  alias: KBS 쿨 FM
+  sequence:
+  - service: shell_command.kbscoolfm
+'radio_kbshappyfm':
+  alias: KBS 해피 FM
+  sequence:
+  - service: shell_command.kbshappyfm
+'radio_kbs1radio':
+  alias: KBS 1 라디오
+  sequence:
+  - service: shell_command.kbs1radio
+'radio_kbs3radio':
+  alias: KBS 3 라디오
+  sequence:
+  - service: shell_command.kbs3radio
+'radio_kbsclassicfm':
+  alias: kbs 클래식 FM
+  sequence:
+  - service: shell_command.kbsclassicfm
+'radio_tbs':
+  alias: tbs FM
+  sequence:
+  - service: shell_command.tbs
+'radio_tbn':
+  alias: tbn FM
+  sequence:
+  - service: shell_command.tbn
+'radio_ifm':
+  alias: 경인방송 라디오
+  sequence:
+  - service: shell_command.ifm
+'radio_ytn':
+  alias: ytn 라디오
+  sequence:
+  - service: shell_command.ytn
+'radio_cbsfm':
+  alias: 씨베스 fm
+  sequence:
+  - service: shell_command.cbsfm
+'radio_cbsmusicfm':
+  alias: 씨베스 음악 fm
+  sequence:
+  - service: shell_command.cbsmusicfm
+'radio_ebsfm':
+  alias: EBS FM
+  sequence:
+  - service: shell_command.ebsfm
