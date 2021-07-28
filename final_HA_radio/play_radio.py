@@ -7,7 +7,7 @@ app = Flask(__name__)
 
 def play_media(urls, infor):
     payload = {
-        "entity_id": "media_player.office_speaker", #플레이어 엔티티 아이디
+        "entity_id": "[플레이어 엔티티 아이디]",
         "media_content_id": urls,
         "media_content_type": "music",
         "extra": 
