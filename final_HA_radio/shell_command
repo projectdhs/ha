@@ -8,3 +8,11 @@ shell_command:
   kbs1radio: 'curl -G "http://ip:8989/play_kbs?ch=kbs1radio"' 
   kbs3radio: 'curl -G "http://ip:8989/play_kbs?ch=kbs3radio"' 
   kbsclassicfm: 'curl -G "http://ip:8989/play_kbs?ch=kbsclassicfm"'
+  
+  tbs: 'curl -G "http://ip:8989/play_tbs"'
+  tbn: 'curl -G "http://ip:8989/play_tbn"'
+  ifm: 'curl -G "http://ip:8989/play_ifm"' 
+  ytn: 'curl -G "http://ip:8989/play_ytn"'   
+  cbsfm: 'curl -G "http://ip:8989/play_cbs_fm"'   
+  cbsmusicfm: 'curl -G "http://ip:8989/play_cbs_music"'   
+  ebsfm: 'curl -G "http://ip:8989/play_ebs"'
