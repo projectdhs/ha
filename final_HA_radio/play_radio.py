@@ -21,7 +21,7 @@ def play_media(urls, infor):
                     }
     }
     h={"Authorization" : "Bearer [장기토큰]", "content-type": "application/json"}
-    re = requests.post('[HA URL : https://ip:port]]/api/services/media_player/play_media', headers=h, data = json.dumps(payload))
+    re = requests.post('[HA URL : https://ip:port]/api/services/media_player/play_media', headers=h, data = json.dumps(payload))
     print(re.status_code)
 
 
