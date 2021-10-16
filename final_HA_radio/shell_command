@@ -1,8 +1,8 @@
 shell_command:
   mbcfm: 'curl -G "http://ip:8989/play_mbc?ch=mbcfm"'
   mbcfm4u: 'curl -G "http://ip:8989/play_mbc?ch=mbcfm4u"'
-  sbspowerfm: 'curl -G "http://ip:8989/play_sbs?ch=sbspowerfm"'
-  sbslovefm: 'curl -G "http://ip:8989/play_sbs?ch=sbslovefm"'
+  sbspowerfm: 'curl -G "http://ip:8989/play_sbs?ch=powerfm"'
+  sbslovefm: 'curl -G "http://ip:8989/play_sbs?ch=lovefm"'
   kbscoolfm: 'curl -G "http://ip:8989/play_kbs?ch=kbscoolfm"'
   kbshappyfm: 'curl -G "http://ip:8989/play_kbs?ch=kbshappyfm"'
   kbs1radio: 'curl -G "http://ip:8989/play_kbs?ch=kbs1radio"' 
