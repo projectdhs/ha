@@ -4,17 +4,17 @@ http://aac.cbs.co.kr/cbs939/_definst_/cbs939.stream/playlist.m3u8
 #EXTINF:-1 tvg-id="I10759.labs.zap2it.com",1_cbs_fm
 http://aac.cbs.co.kr/cbs981/_definst_/cbs981.stream/playlist.m3u8
 #EXTINF:-1 tvg-id="I10759.labs.zap2it.com",1_wbs
-http://172.30.2.38:8980/wbs_fm.php
+http://ip:8980/wbs_fm.php
 #EXTINF:-1 tvg-id="I10759.labs.zap2it.com",1_kbs_classic_fm
-http://172.30.2.38:8989/play_kbs1?ch=kbs1fm
+http://ip:8989/play_kbs1?ch=kbs1fm
 #EXTINF:-1 tvg-id="I10759.labs.zap2it.com",1_kbs_cool_fm
-http://172.30.2.38:8989/play_kbs1?ch=kbs2fm
+http://ip:8989/play_kbs1?ch=kbs2fm
 #EXTINF:-1 tvg-id="I10759.labs.zap2it.com",1_kbs_1radio
-http://172.30.2.38:8989/play_kbs1?ch=kbs1radio
+http://ip:8989/play_kbs1?ch=kbs1radio
 #EXTINF:-1 tvg-id="I10759.labs.zap2it.com",1_kbs_happy_fm
-http://172.30.2.38:8989/play_kbs1?ch=kbs2radio
+http://ip:8989/play_kbs1?ch=kbs2radio
 #EXTINF:-1 tvg-id="I10759.labs.zap2it.com",1_kbs_3radio
-http://172.30.2.38:8989/play_kbs1?ch=kbs3radio
+http://ip:8989/play_kbs1?ch=kbs3radio
 #EXTINF:-1 tvg-id="I10759.labs.zap2it.com",1_tbsfm
 http://58.234.158.60:1935/fmlive/myStream/playlist.m3u8
 #EXTINF:-1 tvg-id="I10759.labs.zap2it.com",1_tbnfm
