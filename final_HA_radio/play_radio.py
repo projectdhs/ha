@@ -45,18 +45,32 @@ def sav_mbc():
     return 'success'
 
 
-
+#21-10-16 sbs 라디오 패치 (miumida님 소스 참고)
 @app.route('/play_sbs')
 def sav_sbs():
+
     ch=request.args.get("ch")
-    sbs_ch={'sbspowerfm' : 'S07', 'sbslovefm': 'S08'}
-    sbs_ch_param={'sbspowerfm' : 'sbs 파워 fm', 'sbslovefm' : 'sbs 러브 fm'}
-    hh={'User-Agent' : 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.122 Safari/537.36', 'Referer' : 'https://www.sbs.co.kr/', 'Accept-Language' : 'ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7', 'Accept-Encoding' : 'gzip, deflate, br'}
-    html=requests.get("http://apis.sbs.co.kr/play-api/1.0/onair/channel/"+sbs_ch[ch]+"?v_type=2&platform=pcweb&protocol=hls&jwt-token=", headers=hh)
-    soup=BeautifulSoup(html.text, 'html.parser')
-    jsons=json.loads(str(soup))
-    j=jsons['onair']['source']["mediasourcelist"][0]['mediaurl']
-    #print(j)
+    sbs_ch={'powerfm' : 'powerpc', 'lovefm': 'lovepc'}
+    SBS_URL='https://apis.sbs.co.kr/play-api/1.0/livestream/{}/{}?protocol=hls&ssl=Y'
+    
+    sbsheader = {
+        'Host': 'apis.sbs.co.kr',
+        'Connection': 'keep-alive',
+        'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_16_0) AppleWebKit/537.36 (KHTML, like Gecko) GOREALRA/1.2.1 Chrome/85.0.4183.121 Electron/10.1.3 Safari/537.36',
+        'Accept': '*/*',
+        'Origin': 'https://gorealraplayer.radio.sbs.co.kr',
+        'Sec-Fetch-Site': 'same-site',
+        'Sec-Fetch-Mode': 'cors',
+        'Sec-Fetch-Dest': 'empty',
+        'Referer': 'https://gorealraplayer.radio.sbs.co.kr/main.html?v=1.2.1',
+        'Accept-Encoding': 'gzip, deflate, br',
+        'Accept-Language': 'ko',
+        'If-None-Match': 'W/"134-0OoLHiGF4IrBKYLjJQzxNs0/11M"'
+    }
+    html = requests.get(SBS_URL.format(sbs_ch[ch], ch), headers=sbsheader)
+    j=html.text
+    
+
     play_media(j, sbs_ch_param[ch])
     print(j)
     return 'success'
