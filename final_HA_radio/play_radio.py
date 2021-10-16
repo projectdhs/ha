@@ -176,10 +176,12 @@ def sav_cbs():
     play_media(j, 'cbs FM')
     return 'success'
 
+#21-10-16 방식 변경
 @app.route('/play_ebs')
 def sav_ebs():
-    j='https://ebsonair.ebs.co.kr/fmradiofamilypc/familypc1m/playlist.m3u8'
-    play_media(j, 'ebs 라디오')
+    f=open(direc+'ebs.txt', 'r')
+    play_media(f.read(), 'ebs 라디오')
+    f.close()
     return 'success'
 
 if __name__ == "__main__":
