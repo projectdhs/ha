@@ -92,6 +92,51 @@ def kbs():
     stream=line.split('"service_url":"')[1].split('"')[0]
     return redirect(stream, code=302)
 
+#21-10-16 추가
+@app.route('/return_cbs_music')
+def return_cbs_music():
+    f=open(direc+'cbs_music.txt', 'r')
+    get_url=f.read()
+    f.close()
+    return redirect(get_url, code=302)
+    
+@app.route('/return_cbs_fm')
+def return_cbs_fm():
+    f=open(direc+'cbs_fm.txt', 'r')
+    get_url=f.read()
+    f.close()
+    return redirect(get_url, code=302)
+    
+@app.route('/return_ifm')
+def return_ifm():
+    f=open(direc+'ifm.txt', 'r')
+    get_url=f.read()
+    f.close()
+    return redirect(get_url, code=302)
+    
+@app.route('/return_tbnfm')
+def return_tbnfm():
+    f=open(direc+'tbnfm.txt', 'r')
+    get_url=f.read()
+    f.close()
+    return redirect(get_url, code=302)
+    
+@app.route('/return_tbsfm')
+def return_tbsfm():
+    f=open(direc+'tbsfm.txt', 'r')
+    get_url=f.read()
+    f.close()
+    return redirect(get_url, code=302)
+
+@app.route('/return_ytn')
+def return_ytn( ):
+    f=open(direc+'ytn.txt', 'r')
+    get_url=f.read()
+    f.close()
+    return redirect(get_url, code=302)
+#21-10-16 추가 끝
+
+
 @app.route('/play_tbs')
 def sav_tbs():
     j='url'
