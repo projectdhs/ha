@@ -3,6 +3,9 @@ from bs4 import BeautifulSoup
 import json
 from flask import Flask, request, redirect
 
+#21-10-16 추가, 파일 경로 지정
+direc='/home/radios/'
+
 app = Flask(__name__)
 
 def play_media(urls, infor):
