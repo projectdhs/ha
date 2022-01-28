@@ -1,0 +1,16 @@
+type: custom:mini-media-player
+entity: media_player.office_speaker
+name: radio
+icon: kuf:it_radio
+shortcuts:
+  columns: 4
+  buttons:
+    - name: kbs
+      type: script
+      id: radio_kbs
+    - name: sbs
+      type: script
+      id: radio_sbs
+    - name: sbs
+      type: script
+      id: radio_mbc
