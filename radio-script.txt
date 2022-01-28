@@ -1,0 +1,14 @@
+'radio_kbs':
+  alias: mbc 표준 FM
+  sequence:
+  - service: media_player.play_media
+    data:
+      entity_id: media_player.office_speaker
+      media_content_id: http://192.168.0.x:3005/radio?keys=kbs_cool&token=homeassistant
+      media_content_type: audio/aac
+      extra:
+        metadata:
+          metadataType: 3
+          title: KBS COOL FM
+          images:
+            - url: https://tilos.hu/images/kockalogo.png
