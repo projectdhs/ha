@@ -1,5 +1,5 @@
 'radio_kbs':
-  alias: mbc 표준 FM
+  alias: KBS 쿨 FM
   sequence:
   - service: media_player.play_media
     data:
