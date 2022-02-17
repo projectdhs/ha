@@ -1,0 +1,54 @@
+type: custom:button-card
+entity: switch.computer_my_state
+name: 컴퓨터
+color_type: card
+show_entity_picture: true
+show_state: true
+show_name: true
+entity_picture: /local/icons/plug_2.png
+double_tap_action:
+  action: more-info
+hold_action:
+  action: more-info
+  entity: switch.dawonwifi_switch
+styles:
+  card:
+    - height: 90px
+    - border: 1px solid RGB(29,27,30)
+    - border-radius: 10px
+  grid:
+    - grid-template-areas: '"i" "n" "s"'
+    - grid-template-columns: 1fr
+    - grid-template-rows: 1fr
+  img_cell:
+    - align-self: end
+    - text-align: end
+  icon:
+    - width: 35%
+    - margin-top: '-5%'
+    - margin-left: '-20%'
+  name:
+    - justify-self: end
+    - padding-right: 12px
+    - font-size: 14px
+  state:
+    - justify-self: end
+    - font-size: 12px
+    - padding-right: 12px
+state:
+  - value: 'on'
+    styles:
+      name:
+        - font-weight: bold
+        - color: white
+      card:
+        - background-color: RGB(60,144,167)
+  - value: 'off'
+    styles:
+      icon:
+        - filter: grayscale(100%)
+      card:
+        - background-color: RGB(67,73,82)
+      name:
+        - color: white
+        - font-weight: bold
